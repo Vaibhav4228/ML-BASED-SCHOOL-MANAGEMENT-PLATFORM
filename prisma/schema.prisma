@@ -4,6 +4,7 @@
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -22,7 +23,7 @@ model Student {
   id          String       @id
   username    String       @unique
   name        String
-  surname     String
+  surname     String    
   email       String?      @unique
   phone       String?      @unique
   address     String
