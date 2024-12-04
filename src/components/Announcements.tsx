@@ -1,4 +1,9 @@
-const Announcements = () => {
+import { auth } from "@clerk/nextjs/server";
+
+const Announcements = async () => {
+
+  const { userId, sessionClaims } = await auth();
+  
   return (
     <div className="bg-white p-4 rounded-md">
       <div className="flex items-center justify-between">
